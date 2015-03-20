@@ -53,7 +53,10 @@ namespace Newtonsoft.Json.Utilities
 #if NET20
             return TimeZone.CurrentTimeZone.GetUtcOffset(d);
 #else
-            return TimeZoneInfo.Local.GetUtcOffset(d);
+            //return TimeZoneInfo.Local.GetUtcOffset(d);
+            // Workaround for Mono/Unity.
+            // https://json.codeplex.com/workitem/23775
+            return TimeSpan.Zero;
 #endif
         }
 
@@ -216,7 +219,10 @@ namespace Newtonsoft.Json.Utilities
                         offset = new TimeSpan(dateTimeParser.ZoneHour, dateTimeParser.ZoneMinute, 0);
                         break;
                     default:
-                        offset = TimeZoneInfo.Local.GetUtcOffset(d);
+                        //offset = TimeZoneInfo.Local.GetUtcOffset(d);
+                        // Workaround for Mono/Unity.
+                        // https://json.codeplex.com/workitem/23775
+                        offset = TimeSpan.Zero;
                         break;
                 }
 
