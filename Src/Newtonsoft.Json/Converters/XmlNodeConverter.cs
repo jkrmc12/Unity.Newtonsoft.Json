@@ -23,7 +23,6 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System.Numerics;
 #if !PORTABLE40
 using System;
 using System.Collections.Generic;
