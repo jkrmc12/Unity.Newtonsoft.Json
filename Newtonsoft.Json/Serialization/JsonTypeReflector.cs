@@ -39,6 +39,7 @@ using Newtonsoft.Json.Utilities.LinqBridge;
 using System.Linq;
 #endif
 using System.Runtime.Serialization;
+using MemberTypes = Newtonsoft.Json.Utilities.MemberTypes;
 
 namespace Newtonsoft.Json.Serialization
 {

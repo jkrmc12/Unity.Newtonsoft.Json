@@ -49,6 +49,7 @@ using System.Runtime.CompilerServices;
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
+using MemberTypes = Newtonsoft.Json.Utilities.MemberTypes;
 
 #endif
 
